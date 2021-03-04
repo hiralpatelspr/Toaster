@@ -1,0 +1,3 @@
+include ':sadilibrary'
+include ':app'
+rootProject.name = "ShaadiLibrary"
