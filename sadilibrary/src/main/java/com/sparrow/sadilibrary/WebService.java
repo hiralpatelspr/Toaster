@@ -31,7 +31,7 @@ public class WebService {
                     .writeTimeout(100, TimeUnit.SECONDS)
                     .build();
             Retrofit client = new Retrofit.Builder()
-                    .baseUrl("http://gohelvijay47932685.ipage.com/spr_lib/")
+                    .baseUrl("http://gohelvijay47932685.ipage.com/mrg_lib/")
                     .client(okclient)
                     .addConverterFactory(GsonConverterFactory.create(new Gson()))
                     .build();
@@ -43,51 +43,31 @@ public class WebService {
     public interface WebServiceInterface {
 
         @FormUrlEncoded
-        @POST("jobseeker.php")
-        Call<JobseekerResponse> SendJobSeekerData(
-                @Field("fname") String fname,
-                @Field("lname") String lname,
+        @POST("add_bio.php")
+        Call<JobseekerResponse> SendBioData(
+                @Field("name") String name,
                 @Field("image") String image,
-                @Field("fathername") String fathername,
-                @Field("gender") String gender,
                 @Field("dob") String dob,
-                @Field("caddress") String caddress,
-                @Field("cstate") String cstate,
-                @Field("ccity") String ccity,
-                @Field("cpincode") String cpincode,
-                @Field("paddress") String paddress,
-                @Field("pastate") String pastate,
-                @Field("pacity") String pacity,
-                @Field("papincode") String papincode,
+                @Field("height") String height,
+                @Field("weight") String weight,
+                @Field("education") String education,
+                @Field("profession") String profession,
+                @Field("hobbie") String hobbie,
+                @Field("religion") String religion,
+                @Field("native") String nativ,
+                @Field("cast") String cast,
+                @Field("marital_status") String marital_status,
+                @Field("address") String address,
                 @Field("mobile") String mobile,
                 @Field("email") String email,
-                @Field("tenb") String tenb,
-                @Field("teni") String teni,
-                @Field("tenc") String tenc,
-                @Field("teny") String teny,
-                @Field("twb") String twb,
-                @Field("twi") String twi,
-                @Field("twc") String twc,
-                @Field("twy") String twy,
-                @Field("grab") String grab,
-                @Field("grai") String grai,
-                @Field("grac") String grac,
-                @Field("gray") String gray,
-                @Field("otherb") String otherb,
-                @Field("otheri") String otheri,
-                @Field("otherc") String otherc,
-                @Field("othery") String othery,
-                @Field("workedother") String workedother,
-                @Field("ex") String ex,
-                @Field("month") String month,
-                @Field("role") String role,
-                @Field("organization") String organization,
-                @Field("salary") String salary,
-                @Field("skill1") String skill1,
-                @Field("regi_date") String regi_date,
-                @Field("country") String country,
-                @Field("some_keyword") String some_keyword,
-                @Field("cmp_name") String cmp_name
+                @Field("grand_father") String grand_father,
+                @Field("father") String father,
+                @Field("mother") String mother,
+                @Field("brother") String brother,
+                @Field("sister") String sister,
+                @Field("mosal") String mosal,
+                @Field("mama") String mama
+
         );
 
     }
